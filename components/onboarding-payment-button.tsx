@@ -95,7 +95,7 @@ export function OnboardingPaymentButton({ onSuccess, onClose }: OnboardingPaymen
         message: errorMessage,
         details: error,
       })
-    } finaly {
+    } finally {
       setLoading(false)
     }
   }
