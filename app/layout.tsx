@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "AGI-powered hub to generate, auto-rig, mint, sell, and rent multi-format iNFTs for the ICP2E Jawa Timur community.",
   metadataBase: new URL("https://nusantara-neo.vercel.app"),
-    generator: 'v0.app'
+  generator: 'v0.app'
 };
 
 export default function RootLayout({
@@ -26,12 +26,19 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
+        
+        {/* SAKTI: Penjebol Blokir Layar Putih di Pi Browser */}
+        <meta 
+          httpEquiv="Content-Security-Policy" 
+          content="frame-ancestors 'self' https://*.pinet.com https://sandbox.pinet.com http://sandbox.pinet.com;" 
+        />
+        
         <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
+          html {
+            font-family: ${GeistSans.style.fontFamily};
+            --font-sans: ${GeistSans.variable};
+            --font-mono: ${GeistMono.variable};
+          }
         `}</style>
       </head>
       <body className="bg-background text-foreground antialiased">
